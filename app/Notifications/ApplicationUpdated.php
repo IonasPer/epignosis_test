@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
+
 class ApplicationUpdated extends Notification
 {
     use Queueable;
@@ -41,12 +42,10 @@ class ApplicationUpdated extends Notification
      */
     public function toMail($notifiable)
     {
-
-        
         return (new MailMessage)
                     ->line("Dear employee, your supervisor has {$this->data['status']} your application
 submitted on {$this->data['date_submitted']}.")
-                    ->action('You can see all your applications here', url('/main/succes_login'))
+                    ->action('You can see all your applications here', url('/main/'))
                     ->line('Thank you for using our application!');
     }
 

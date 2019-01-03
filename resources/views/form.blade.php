@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Simple Login System in Laravel</title>
+  <title>Internal Vacation System</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -29,32 +29,27 @@
    @endif
 
 
-   <form method="post" action="{{ url('/application/submit') }}">
+   <form method="post" action="{{ url($form_action) }}">
     {{ csrf_field() }}
+    @php
+    foreach($form_data as $key=>$value){
+    @endphp
     <div class="form-group">
-     <label>Date From</label>
-     <input type="date" name="date_from" class="form-control" />
-     @if ($errors->has('date_from'))
-    <div class="alert alert-danger danger-block">{{ $errors->first('date_from') }}</div>
+      <label>{{ucfirst($key)}}</label>
+      <input type="{{$value}}" name="{{$key}}" class="form-control" />
+     @if ($errors->has($key))
+      <div class="alert alert-danger danger-block">{{ $errors->first($key) }}</div>
     @endif
     </div>
-    <div class="form-group">
-     <label>Date To</label>
-     <input type="date" name="date_to" class="form-control" />
-     @if ($errors->has('date_to'))
-    <div class="alert alert-danger danger-block">{{ $errors->first('date_to') }}</div>
-    @endif
-    </div>
-    <div class="form-group">
-     <label>Reason</label>
-     <input type="text" name="reason" class="form-control" />
-     @if ($errors->has('reason'))
-    <div class="alert alert-danger danger-block">{{ $errors->first('reason') }}</div>
-    @endif
-    </div>
+    @php
+    }
+
+    @endphp
+
+    
     <div class="form-group">
       <input hidden type='text' name='user' value ="{{Auth::user()->id}}" />
-     <input type="submit" name="vacation" class="btn btn-primary" value="vacation" />
+     <input type="submit" name="submit" class="btn btn-primary" value="submit" />
     </div>
    </form>
   </div>
