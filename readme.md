@@ -30,6 +30,9 @@ https://getcomposer.org/download/
 - In the new directory type the following command to install all packages. 
     `$ composer install`
 - Type `$ php artisan serve`, in the command line to  start serving at localhost. 
+-Create a Database. The database name will be used in the .env file.
+
+
 
 ## Mailtrap
 
@@ -40,7 +43,6 @@ In the Demo inbox at the top center of the page there is the Credentials Section
 
 ## .env
 
-Before editing the .env create a Database, the database name will be used in the .env file.
 
 In the .env file in the Laravel Project root make the following changes
 ```
@@ -59,8 +61,11 @@ MAIL_ENCRYPTION=null
 ## Migrations and seeding
 
 Once the .env is setup run with php artisan the migrations and seeders to create sample users. 
-`php artisan migrate` 
-and once migrations are set
+`php artisan migrate`
+
+and once migrations are set 
+
 `php artisan db:seed`
 
 Note: the demo user password can be found in the users seeder
+
