@@ -1,15 +1,10 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="https://www.epignosishq.com/wp-content/uploads/2018/01/epignosis-logo-retina-1.png"></p>
+# Epignosis Test Application
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
 ## The System EER Diagram
 
-[EER Diagram]
+[EER Diagram]https://github.com/IonasPer/epignosis_test/blob/master/Epignosis%20Test%20EER.png
 
 ## About The Technologies
 
@@ -29,16 +24,17 @@ To install laravel simply follow the instructions:
 -First laravel requires composer. Visit the following URL and download composer to install it on your system.
 https://getcomposer.org/download/
 - Check composer is installed by typing `$ composer`
-- You can clone or download this repository into your local laravel project.Create a new directory and type the following command there to install Laravel. 
-    composer install
-- Type `$ php artisan serve`, in the command line  start serving at localhost.
-- Now 
+- You can clone or download this repository into your local machine.
+- In the new directory type the following command to install all packages. 
+    `$ composer install`
+- Type `$ php artisan serve`, in the command line to  start serving at localhost. 
 
 ## Mailtrap
 
 A Mailtrap account is needed to utilize the mail notifications from a local environment. You can create an account or use your github account to signin in this link : [mailtrap]https://mailtrap.io/
 
 In the Demo inbox at the top center of the page there is the Credentials Section. Add the username and password below in your local .env file.
+
 
 ## .env
 
@@ -57,3 +53,12 @@ MAIL_USERNAME="Your_mailtrap_username"
 MAIL_PASSWORD="Your_mailtrap_password"
 MAIL_ENCRYPTION=null
 ```
+
+##migrations and seeding
+
+Once the .env is setup run with php artisan the migrations and seeders to create sample users. 
+`php artisan migrate` 
+and once migrations are set
+`php artisan db:seed`
+
+Note: the demo user password is 'password'
