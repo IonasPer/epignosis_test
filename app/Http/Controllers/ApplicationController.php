@@ -53,7 +53,7 @@ class ApplicationController extends Controller
             else{
                   
             }  
-                return redirect('main/successlogin');
+                return redirect('successlogin');
             
         }
         else
@@ -88,7 +88,7 @@ function userSubmit(Request $request){
                 ];
                 DB::table('users')->insert($user_data);   
             }  
-                return redirect('main/successlogin');
+                return redirect('successlogin');
             
         }
         else
@@ -98,25 +98,28 @@ function userSubmit(Request $request){
     }
 
 function approve($application_id){  
-        
-        $qry = DB::table('applications')->where('id',$application_id);
-        $qry->update(['status'=> 'approved']);
-        $data = $qry->first();
-        $user = User::find($data->user_id);
-        $application_data = ['status' => $data->status, 'date_submitted'=>$data->date_submitted];
-        Notification::send($user,new ApplicationUpdated($application_data));
-        return redirect('main/successlogin');
+        if(Auth::user()->user_type =='admin'){
+            $qry = DB::table('applications')->where('id',$application_id);
+            $qry->update(['status'=> 'approved']);
+            $data = $qry->first();
+            $user = User::find($data->user_id);
+            $application_data = ['status' => $data->status, 'date_submitted'=>$data->date_submitted];
+            Notification::send($user,new ApplicationUpdated($application_data));
+        }
+        return redirect('successlogin');
+
     }
 
     function reject($application_id){  
-        
-        $qry = DB::table('applications')->where('id',$application_id);
-        $qry->update(['status'=> 'rejected']);
-        $data = $qry->first();
-        $user = User::find($data->user_id);
-        $application_data = ['status' => $data->status, 'date_submitted'=>$data->date_submitted];
-        Notification::send($user,new ApplicationUpdated($application_data));
-        return redirect('main/successlogin');
+        if(Auth::user()->user_type =='admin'){
+            $qry = DB::table('applications')->where('id',$application_id);
+            $qry->update(['status'=> 'rejected']);
+            $data = $qry->first();
+            $user = User::find($data->user_id);
+            $application_data = ['status' => $data->status, 'date_submitted'=>$data->date_submitted];
+            Notification::send($user,new ApplicationUpdated($application_data));
+        }
+        return redirect('successlogin');
     }
 
  

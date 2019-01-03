@@ -16,15 +16,15 @@
     <div class="alert alert-success success-block">
      <strong>Welcome {{ Auth::user()->email }}</strong>
      <br />
-     <a href="{{ url('/main/logout') }}">Logout</a>
+     <a href="{{ url('/logout') }}">Logout</a>
     </div>
    @else
-    <script>window.location = "/main";</script>
+    <script>window.location = "/";</script>
    @endif
    @if($user_type == "employee")
-    <div class='btn btn-success'><a href="{{url('/main/employee')}}">Create Application</a></div>
+    <div class='btn btn-success'><a href="{{url('/employee')}}">Create Application</a></div>
     @else
-    <div class='btn btn-success'><a href="{{url('/main/admin')}}">Create User</a></div>
+    <div class='btn btn-success'><a href="{{url('/admin')}}">Create User</a></div>
    @endif
    <br />
   </div>

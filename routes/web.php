@@ -12,15 +12,12 @@
 */
 use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/main', 'MainController@index');
-Route::post('/main/checklogin', 'MainController@checklogin');
-Route::get('main/successlogin', 'MainController@successlogin');
-Route::get('main/logout', 'MainController@logout');
-Route::get('main/employee','MainController@addApplication');
-Route::get('main/admin','MainController@addUser');
+Route::get('/', 'MainController@index');
+Route::post('/checklogin', 'MainController@checklogin');
+Route::get('successlogin', 'MainController@successlogin');
+Route::get('logout', 'MainController@logout');
+Route::get('employee','MainController@addApplication');
+Route::get('admin','MainController@addUser');
 
 Route::post('user/submit','ApplicationController@userSubmit');
 Route::post('application/submit','ApplicationController@applicationSubmit');
