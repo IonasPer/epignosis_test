@@ -14,7 +14,7 @@ To make this test project I have used the following technologies (frameworks/3d-
 
 - Laravel 5.7 
 - PHP 7.3
-- Maria_DB
+- MYSQL
 - mailtrap.io
 
 ## Setting Up Laravel
@@ -58,14 +58,18 @@ MAIL_PASSWORD="Your_mailtrap_password"
 MAIL_ENCRYPTION=null
 ```
 
+## Generate Encryption Key
+
+Use `$ php artisan key:generate` to generate a key for laravel.
+
 ## Migrations and seeding
 
 Once the .env is setup run with php artisan the migrations and seeders to create sample users. 
-`php artisan migrate`
+`$ php artisan migrate`
 
 and once migrations are set 
 
-`php artisan db:seed`
+`$ php artisan db:seed`
 
 Note: the demo user password can be found in the users seeder
 
