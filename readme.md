@@ -1,5 +1,7 @@
 <p align="center"><img src="https://www.epignosishq.com/wp-content/uploads/2018/01/epignosis-logo-retina-1.png"></p>
-# Epignosis Test Application
+
+ Epignosis Test Application
+============================
 
 
 ## The System EER Diagram
@@ -61,4 +63,4 @@ Once the .env is setup run with php artisan the migrations and seeders to create
 and once migrations are set
 `php artisan db:seed`
 
-Note: the demo user password is 'password'
+Note: the demo user password can be found in the users seeder
