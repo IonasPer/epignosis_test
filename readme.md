@@ -56,7 +56,7 @@ MAIL_PASSWORD="Your_mailtrap_password"
 MAIL_ENCRYPTION=null
 ```
 
-##migrations and seeding
+## Migrations and seeding
 
 Once the .env is setup run with php artisan the migrations and seeders to create sample users. 
 `php artisan migrate` 
