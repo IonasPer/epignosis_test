@@ -7,6 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## The System EER Diagram
+
+[EER Diagram]https://www.lucidchart.com/invitations/accept/801c4add-7f94-4b93-a2c4-42f4793a6d88
+
 ## About The Technologies
 
 To make this test project I have used the following technologies (frameworks/3d-party solutions)
@@ -22,7 +26,7 @@ or $ php artisan serve through cli and XAMPP server (Apache/SQL).
 
 To install laravel simply follow the instructions:
 -First laravel requires composer. Visit the following URL and download composer to install it on your system.
-https://getcomposer.org/download/
+[composer]https://getcomposer.org/download/
 - Check composer is installed by typing $ composer
 - Create a new directory and type the following command there to install Laravel. 
     composer create-project --prefer-dist laravel/laravel epignosis_test
@@ -31,7 +35,7 @@ https://getcomposer.org/download/
 
 ## Mailtrap
 
-A Mailtrap account is needed to utilize the mail notifications from a local environment. You can create an account or use your github account to signin in this link : https://mailtrap.io/
+A Mailtrap account is needed to utilize the mail notifications from a local environment. You can create an account or use your github account to signin in this link : [mailtrap]https://mailtrap.io/
 
 In the Demo inbox at the top center of the page there is the Credentials Section. Add the username and password below in your local .env file.
 
