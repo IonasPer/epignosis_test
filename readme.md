@@ -29,7 +29,7 @@ https://getcomposer.org/download/
 - You can clone or download this repository into your local machine.
 - In the new directory type the following command to install all packages. 
     `$ composer install`
-- Type `$ php artisan serve`, in the command line to  start serving at localhost. 
+- Type `$ php artisan serve`, in the command line to  start serving at localhost.
 -Create a Database. The database name will be used in the .env file.
 
 
@@ -71,5 +71,5 @@ and once migrations are set
 
 `$ php artisan db:seed`
 
-Note: the demo user password can be found in the users seeder
+Note: the demo user credentials can be found in the users seeder
 
