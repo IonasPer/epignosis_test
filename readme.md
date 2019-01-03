@@ -9,29 +9,30 @@
 
 ## The System EER Diagram
 
-[EER Diagram]https://www.lucidchart.com/invitations/accept/801c4add-7f94-4b93-a2c4-42f4793a6d88
+[EER Diagram]
 
 ## About The Technologies
 
 To make this test project I have used the following technologies (frameworks/3d-party solutions)
 
-- Laravel 5.7, PHP 7.3 used
+- Laravel 5.7 
+- PHP 7.3
 - Maria_DB
 - mailtrap.io
 
 ## Setting Up Laravel
 
 The local environment used can be set either via the Homestead (more information here: https://laravel.com/docs/5.7/homestead)
-or $ php artisan serve through cli and XAMPP server (Apache/SQL).
+or `$ php artisan serve` through cli and XAMPP server (Apache/SQL).
 
 To install laravel simply follow the instructions:
 -First laravel requires composer. Visit the following URL and download composer to install it on your system.
-[composer]https://getcomposer.org/download/
-- Check composer is installed by typing $ composer
-- Create a new directory and type the following command there to install Laravel. 
-    composer create-project --prefer-dist laravel/laravel epignosis_test
-- Type $ php artisan serve and in the command line it should start serving at localhost.
-- Now you can clone or download this repository into your local project.
+https://getcomposer.org/download/
+- Check composer is installed by typing `$ composer`
+- You can clone or download this repository into your local laravel project.Create a new directory and type the following command there to install Laravel. 
+    composer install
+- Type `$ php artisan serve`, in the command line  start serving at localhost.
+- Now 
 
 ## Mailtrap
 
@@ -44,7 +45,8 @@ In the Demo inbox at the top center of the page there is the Credentials Section
 Before editing the .env create a Database, the database name will be used in the .env file.
 
 In the .env file in the Laravel Project root make the following changes
-DB_DATABASE="Your_database_name"    /* I use epignosis_dev*/
+```
+DB_DATABASE="Your_database_name"
 DB_USERNAME=root
 DB_PASSWORD=
 
@@ -54,8 +56,4 @@ MAIL_PORT=2525
 MAIL_USERNAME="Your_mailtrap_username"
 MAIL_PASSWORD="Your_mailtrap_password"
 MAIL_ENCRYPTION=null
-
-
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-
+```
